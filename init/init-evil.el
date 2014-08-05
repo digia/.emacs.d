@@ -2,10 +2,20 @@
 
 (setq 
  evil-default-cursor t
- evil-emacs-state-cursor  '("red" box) ;; BE CAREFUL WE ARE IN EMACS MODE
- evil-insert-state-cursor '("white" bar)
- evil-visual-state-cursor '("white" hollow)
- evil-normal-state-cursor '("white" box))
+ evil-search-module 'evil-search
+ evil-magic 'very-magic)
+
+;; Cursor change that works with iTerm2 and Tmux
+(defun my-evil-terminal-cursor-change ()
+  (when (string= (getenv "TERM_PROGRAM") "iTerm.app")
+    (add-hook 'evil-insert-state-entry-hook (lambda () (my-send-string-to-terminal "\e]50;CursorShape=1\x7")))
+    (add-hook 'evil-insert-state-exit-hook  (lambda () (my-send-string-to-terminal "\e]50;CursorShape=0\x7"))))
+  (when (and (getenv "TMUX") (string= (getenv "TERM_PROGRAM") "iTerm.app"))
+    (add-hook 'evil-insert-state-entry-hook (lambda () (my-send-string-to-terminal "\ePtmux;\e\e]50;CursorShape=1\x7\e\\")))
+    (add-hook 'evil-insert-state-exit-hook  (lambda () (my-send-string-to-terminal "\ePtmux;\e\e]50;CursorShape=0\x7\e\\")))))
+
+(add-hook 'after-make-frame-functions (lambda (frame) (my-evil-terminal-cursor-change)))
+(my-evil-terminal-cursor-change)
 
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)

@@ -1,4 +1,4 @@
-(global-evil-leader-mode)
+(global-evil-leader-mode t)
 
 (evil-leader/set-leader ",")
 

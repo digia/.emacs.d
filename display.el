@@ -18,6 +18,7 @@
 
 ;; UI configuration
 (show-paren-mode 1) ;; Show open and close parens
+(setq show-paren-delay 0)
 (require 'fill-column-indicator)
 (setq 
  fci-mode 1
@@ -30,6 +31,8 @@
 
 ;; Line number 
 (global-linum-mode 1)
+(column-number-mode t)
+;; (size-indication-mode t)
 
 (unless window-system
   (add-hook 'linum-before-numbering-hook
@@ -46,8 +49,6 @@
 
 (unless window-system
   (setq linum-format 'linum-format-func))
-
-
 
 ;; Remove elements
 (menu-bar-mode -1) ;; Remove the top menu

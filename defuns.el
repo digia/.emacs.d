@@ -11,4 +11,7 @@
   (interactive)
   (kill-buffer (current-buffer)))
 
+(defun my-send-string-to-terminal (string)
+    (unless (display-graphic-p) (send-string-to-terminal string)))
+
 (provide 'defuns)
