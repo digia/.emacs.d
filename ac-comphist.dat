@@ -1,0 +1,70 @@
+((("switch-to-previous-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("max-mini-window-height" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-linum-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("display" .
+   [1 0 0 0 0 0 0])
+  ("provide" .
+   [1 0 0 0 0 0 0])
+  ("fci-rule-color" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fill-column-indicator" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("true" .
+   [2 0 0 0])
+  ("function" .
+   [0 0 0 0 0 0 0 1])
+  ("solarized-contrast" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("solarized-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [7 0 0 0])
+  ("solarized-degrade" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("solarized-broken-srgb" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  (":name" .
+   [1 0 0 0 0])
+  ("emacs-color-theme-solarized" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":type" .
+   [1 0 0 0 0])
+  ("Git" .
+   [0 0 2])
+  (":url" .
+   [1 0 0 0])
+  (":features" .
+   [1 0 0 0 0 0 0 0 0])
+  ("backup-directory-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("print" .
+   [1 0 0 0 0])
+  ("global-hl-line-mode" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("set-face-background" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("highlight" .
+   [0 0 0 0 0 0 0 0 1])
+  ("hl-line" .
+   [1 0 0 0 0 0 0])
+  ("require" .
+   [2 0 0 0 0 0 0])
+  ("fill-column" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("fci-rule-column" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fci-mode" .
+   [2 0 0 0 0 0 0 0])
+  ("mapc" .
+   [1 0 0 0])
+  ("evil-want-C-u-scroll" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("auto-complete" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("css-mode" .
+   [1 0 0 0 0 0 0 0])))

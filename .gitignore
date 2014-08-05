@@ -1,0 +1,6 @@
+el-get/*
+!el-get/el-get
+elpa/*
+!elpa/.gitkeep
+auto-save-list/
+!auto-save-list/.gitkeep
