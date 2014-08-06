@@ -43,6 +43,10 @@
        (t (setq unread-command-events (append unread-command-events
                           (list evt))))))))
 
+;; Allows moving by screen-line not continuation lines
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
 (define-key evil-normal-state-map ",j" 'evil-window-down)
 (define-key evil-normal-state-map ",k" 'evil-window-up)
 (define-key evil-normal-state-map ",h" 'evil-window-left)
