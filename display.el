@@ -16,6 +16,9 @@
  trucate-lines t
  tab-width 2)
 
+;; Truncate Lines
+(global-visual-line-mode t)
+
 ;; UI configuration
 (show-paren-mode 1) ;; Show open and close parens
 (setq show-paren-delay 0)
