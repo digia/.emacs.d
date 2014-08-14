@@ -5,9 +5,10 @@
 (custom-set-faces  '(default ((t (:background "nil"))) t))
 ;; Note: "Black" is the magic color to fix the light blue bg color. This seems to be unique to iTerm2 and Emacs solarized
 (set-face-foreground 'mode-line "black")
-(set-face-background 'mode-line "blue")
+(set-face-background 'mode-line "brightgreen")
 (set-face-background 'hl-line "black")
 (set-face-background 'linum "black") 
+(set-face-foreground 'linum "brightgreen") 
 (set-default-font "Ubuntu Mono 13")
 
 ;; Tab
