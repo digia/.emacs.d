@@ -20,6 +20,10 @@
 ;; Truncate Lines
 (global-visual-line-mode t)
 
+;; Indentation
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
 ;; UI configuration
 (show-paren-mode 1) ;; Show open and close parens
 (setq show-paren-delay 0)
@@ -40,11 +44,11 @@
 
 (unless window-system
   (add-hook 'linum-before-numbering-hook
-                (lambda ()
-                        (setq-local linum-format-fmt
-                                      (let ((w (length (number-to-string
-                                                            (count-lines (point-min) (point-max))))))
-                                            (concat "%" (number-to-string w) "d"))))))
+             (lambda ()
+                     (setq-local linum-format-fmt
+                                 (let ((w (length (number-to-string
+                                                   (count-lines (point-min) (point-max))))))
+                                   (concat "%" (number-to-string w) "d"))))))
 
 (defun linum-format-func (line)
   (concat

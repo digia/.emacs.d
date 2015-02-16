@@ -27,16 +27,19 @@
                evil-surround
                evil-matchit
                ibuffer-vc
-               fiplr
+               ;; fiplr
+               helm
                auto-complete
                dash ;; Required for solarized-emacs
                solarized-emacs
                fill-column-indicator
-               php-mode-improved
+               php-mode
+               ;; php-mode-improved
                php-completion
-               web-mode
+               web-mode 
                css-mode
                scss-mode
-               emmet-mode)) 
+               emmet-mode
+               go-mode)) 
 
 (provide 'bootstrap)

@@ -3,7 +3,7 @@
 (evil-leader/set-leader ",")
 
 (evil-leader/set-key
-  "b" 'ibuffer
+  "b" 'helm-mini
   "f" 'fiplr-find-file
   "s" '(lambda ()
          (interactive)

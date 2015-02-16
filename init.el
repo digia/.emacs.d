@@ -34,13 +34,16 @@
  inhibit-startup-echo-area-message t
  inhibit-startup-message t)
 
-(xterm-mouse-mode t)
 
 (el-get 'sync my-packages) ;; Load el-get packages
 (require 'display)
 
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Clipboard support
+(setq x-select-enable-clipboard t)
+(xterm-mouse-mode t)
 
 (require 'ido)
 (ido-mode t)

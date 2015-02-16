@@ -1,128 +1,96 @@
-((("hide" .
-   [1 0 0 0])
-  ("excerpt" .
-   [1 0 0 0 0 0 0])
-  ("prev" .
-   [1 0 0 0])
-  ("body" .
-   [7 0 0 0])
-  ("html" .
-   [3 0 0 0])
-  ("showReviewBtn" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("control" .
-   [7 0 0 0 0 0 0])
-  ("content" .
-   [2 0 0 0 0 0 0])
-  ("next" .
-   [6 0 0 0])
-  ("controls" .
-   [5 0 0 0 0 0 0 0])
-  ("return" .
-   [3 0 0 0 0 0])
-  ("text" .
-   [7 0 0 0])
-  ("toggle" .
-   [3 0 0 0 0 0])
-  ("equipmentReviewExcerpt" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("equipmentReviewControls" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1])
-  ("equipmentReviewBody" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1])
-  ("height" .
-   [1 0 0 0 0 0])
-  ("removeAttr" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("log" .
-   [10 0 0])
-  ("console" .
-   [10 0 0 0 0 0 0])
-  ("attr" .
-   [4 0 0 0])
-  ("review" .
-   [10 0 0 0 0 0])
-  ("animate" .
-   [2 0 0 0 0 0 0])
-  ("css" .
-   [7 0 0])
-  ("reviewBody" .
-   [9 0 0 0 0 0 0 0 1 1])
-  ("equipmentReviewContainers" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 3])
-  ("jQuery" .
-   [8 0 0 0 0 0])
-  ("Equipment" .
-   [0 0 0 1 2 0 1 0 0])
-  ("var" .
-   [7 0 0])
-  ("css-mode" .
-   [1 0 0 0 0 0 0 0])
-  ("auto-complete" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("evil-want-C-u-scroll" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("mapc" .
-   [1 0 0 0])
-  ("fci-mode" .
-   [2 0 0 0 0 0 0 0])
-  ("fci-rule-column" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("fill-column" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("require" .
-   [2 0 0 0 0 0 0])
-  ("hl-line" .
-   [1 0 0 0 0 0 0])
-  ("highlight" .
-   [0 0 0 0 0 0 0 0 1])
-  ("set-face-background" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("global-hl-line-mode" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("print" .
-   [1 0 0 0 0])
-  ("backup-directory-alist" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  (":features" .
+((("helm-mini" .
    [1 0 0 0 0 0 0 0 0])
-  (":url" .
+  ("text" .
    [1 0 0 0])
-  ("Git" .
-   [0 0 2])
-  (":type" .
+  ("soup" .
+   [3 0 0 0])
+  ("html" .
+   [1 0 0 0])
+  ("videos" .
+   [2 0 0 0 0 0])
+  ("Crawler" .
+   [1 0 0 0 0 0 0])
+  ("self" .
+   [1 0 0 0])
+  ("pprint" .
+   [2 0 0 0 0 0])
+  ("response" .
+   [7 0 0 0 1 0 0 0])
+  ("requests" .
+   [1 0 0 0 0 0 0 1])
+  ("import" .
+   [0 0 0 0 0 1])
+  ("switch-to-previous-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("max-mini-window-height" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-linum-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("display" .
+   [1 0 0 0 0 0 0])
+  ("provide" .
+   [1 0 0 0 0 0 0])
+  ("fci-rule-color" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fill-column-indicator" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("true" .
+   [2 0 0 0])
+  ("function" .
+   [0 0 0 0 0 0 0 1])
+  ("solarized-contrast" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("solarized-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [7 0 0 0])
+  ("solarized-degrade" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("solarized-broken-srgb" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  (":name" .
    [1 0 0 0 0])
   ("emacs-color-theme-solarized" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  (":name" .
+  (":type" .
    [1 0 0 0 0])
-  ("nil" .
-   [1 0 0])
-  ("solarized-broken-srgb" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("solarized-degrade" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [7 0 0 0])
-  ("solarized-theme" .
+  ("Git" .
+   [0 0 2])
+  (":url" .
+   [1 0 0 0])
+  (":features" .
+   [1 0 0 0 0 0 0 0 0])
+  ("backup-directory-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("print" .
+   [1 0 0 0 0])
+  ("global-hl-line-mode" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("set-face-background" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("highlight" .
+   [0 0 0 0 0 0 0 0 1])
+  ("hl-line" .
+   [1 0 0 0 0 0 0])
+  ("require" .
+   [2 0 0 0 0 0 0])
+  ("fill-column" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("fci-rule-column" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("solarized-contrast" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("function" .
-   [9 0 0 0 0 0 0 1])
-  ("true" .
-   [2 0 0 0])
-  ("fill-column-indicator" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("fci-rule-color" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("provide" .
-   [1 0 0 0 0 0 0])
-  ("display" .
-   [1 0 0 0 0 0 0])
-  ("global-linum-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("max-mini-window-height" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("switch-to-previous-buffer" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])))
+  ("fci-mode" .
+   [2 0 0 0 0 0 0 0])
+  ("mapc" .
+   [1 0 0 0])
+  ("evil-want-C-u-scroll" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("auto-complete" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("css-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("sudo" .
+   [1 0 0 0])
+  ("set-face-foreground" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
