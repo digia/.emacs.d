@@ -29,6 +29,13 @@
                 (when (and dir (not (file-exists-p dir)))
                   (make-directory dir t))))))
 
+;;; Markdown
+(use-package markdown-mode
+  :mode (("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :custom
+  (markdown-fontify-code-blocks-natively t))
+
 ;;; Terraform / HCL
 (use-package terraform-mode
   :mode ("\\.tf\\'" "\\.tfvars\\'"))
