@@ -1,3 +1,0 @@
-(:name solarized-emacs
- :type git 
- :url "https://github.com/bbatsov/solarized-emacs.git") 
