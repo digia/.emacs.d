@@ -8,6 +8,10 @@
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 
+;;; Local variables — apply safe ones silently, ignore risky
+;; Prevents prompts from package README.org files (e.g. org-super-agenda)
+(setq enable-local-variables :safe)
+
 ;;; Line numbers — relative, only in code/text buffers
 (setq display-line-numbers-type 'relative)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)

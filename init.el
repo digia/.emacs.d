@@ -58,6 +58,7 @@
 (require 'git)
 (require 'lsp)
 (require 'tools)
+(require 'org-config)
 (elpaca-wait) ;; Block until all packages installed
 
 ;;; Restore GC to sane threshold after startup

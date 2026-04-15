@@ -90,7 +90,11 @@
   (advice-add 'evil-ex-search-next :after
               (lambda (&rest _) (evil-scroll-line-to-center nil)))
   (advice-add 'evil-ex-search-previous :after
-              (lambda (&rest _) (evil-scroll-line-to-center nil))))
+              (lambda (&rest _) (evil-scroll-line-to-center nil)))
+
+  ;; Free q from macro recording — lets every mode's native q (quit-window,
+  ;; org-agenda-quit, etc.) work. Macros still available via F3/F4.
+  (define-key evil-normal-state-map "q" nil))
 
 ;;; Evil Collection — broad Evil bindings for Emacs modes
 (use-package evil-collection

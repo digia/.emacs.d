@@ -35,6 +35,7 @@ ui.el                  → Theme, modeline, uses my-leader-def
 git.el                 → Magit + diff-hl, uses my-leader-def
 lsp.el                 → Eglot + Corfu, uses my-leader-def
 tools.el               → vterm, undo-fu-session, terraform, kubel
+org-config.el          → Org-mode, org-roam, capture, agenda, uses my-leader-def
 [elpaca-wait]          → All packages installed before user interaction
 GC restore             → 16MB threshold for normal operation
 ```
@@ -60,6 +61,7 @@ Leader key is SPC via general.el, bound in normal/visual/motion states with `:ke
 | `SPC g` | git | git.el |
 | `SPC v` | LSP | lsp.el |
 | `SPC u` | toggle | ui.el |
+| `SPC n` | notes (org-roam, capture, agenda) | org-config.el |
 | `SPC SPC` | double-leader (repeat cmd, reload) | evil-setup.el |
 
 `C-h/j/k/l` override Emacs help prefix for window navigation (help remapped to F1). This is set only in Evil normal/motion state maps to preserve C-h in non-Evil contexts.
@@ -71,6 +73,12 @@ Hand-built `mode-line-format` with Evil state-dependent faces on the filename se
 ### Terminal Cursor (evil-setup.el)
 
 DECSCUSR escape sequences sent via `send-string-to-terminal` on Evil state entry hooks — block cursor in normal, bar in insert, underline in replace. Required because terminal Emacs doesn't translate `cursor-type` to terminal escape codes. Includes `server-after-make-frame-hook` for daemon mode.
+
+### Org-mode / Second Brain (org-config.el)
+
+Vault-agnostic design: `org-roam-directory` and `org-directory` are set from `default-directory` at startup. The user navigates to a brain directory (e.g., `~/Code/digia/brain-coreweave`) before launching Emacs. Each vault gets its own `org-roam.db` inside the vault root. No hardcoded paths or vault-specific content in the config.
+
+Packages: org (built-in), org-roam, org-super-agenda. Capture templates target `daily/<date>.org` and `scratch/inbox.org` relative to the vault root.
 
 ### Clipboard (core.el)
 
