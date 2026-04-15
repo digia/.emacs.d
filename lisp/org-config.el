@@ -20,7 +20,7 @@
 
 (defun my/org-daily-file ()
   "Return path to today's daily org file."
-  (expand-file-name (format-time-string "daily/%Y%m%d.org")
+  (expand-file-name (format-time-string "daily/%Y-%m-%d.org")
                     org-roam-directory))
 
 (defun my/org-inbox-file ()
@@ -96,7 +96,8 @@
    '((emacs-lisp . t)
      (shell . t)
      (python . t)
-     (js . t))))
+     (js . t)))
+)
 
 ;;; org-roam — linked notes with per-vault database
 ;; Only configured when CWD looks like a vault (my/org-vault-p).
@@ -106,11 +107,6 @@
     (org-roam-directory (file-truename default-directory))
     (org-roam-db-location (expand-file-name "org-roam.db" (file-truename default-directory)))
     (org-roam-dailies-directory "daily/")
-    (org-roam-dailies-capture-templates
-     '(("d" "default" entry
-        "* %?"
-        :target (file+head "%<%Y%m%d>.org"
-                            "#+title: %<%Y%m%d - %a>\n"))))
     :config
     (unless noninteractive
       (org-roam-db-autosync-mode))))
@@ -147,6 +143,30 @@
   "n d t" '(org-roam-dailies-goto-today :which-key "today")
   "n d y" '(org-roam-dailies-goto-yesterday :which-key "yesterday")
   "n d d" '(org-roam-dailies-goto-date :which-key "pick date"))
+
+;;; Render toggle — flip between pretty and raw markup (ftplugin-style).
+;; Scoped to org-mode-map so other modes can define their own SPC r p.
+(defun my/org-toggle-markup ()
+  "Toggle between raw markup and pretty rendering in org buffers."
+  (interactive)
+  (if (bound-and-true-p org-indent-mode)
+      (progn
+        (org-indent-mode -1)
+        (setq-local org-hide-emphasis-markers nil)
+        (when org-link-descriptive (org-toggle-link-display))
+        (font-lock-flush)
+        (message "Org markup: raw"))
+    (progn
+      (org-indent-mode 1)
+      (setq-local org-hide-emphasis-markers t)
+      (unless org-link-descriptive (org-toggle-link-display))
+      (font-lock-flush)
+      (message "Org markup: pretty"))))
+
+(my-leader-def
+  :keymaps 'org-mode-map
+  "r" '(:ignore t :which-key "render")
+  "r p" '(my/org-toggle-markup :which-key "toggle markup"))
 
 ;;; Terminal key fixes for org-mode
 ;; evil-collection binds <tab> and <S-tab> (GUI function keys), but terminals
