@@ -129,6 +129,7 @@
 (my-leader-def
   "n f" '(org-roam-node-find :which-key "find note")
   "n i" '(org-roam-node-insert :which-key "insert link")
+  "n I" '(org-id-get-create :which-key "create node ID")
   "n b" '(org-roam-buffer-toggle :which-key "backlinks")
   "n c" '(org-capture :which-key "capture")
   "n a" '(org-agenda :which-key "agenda")
