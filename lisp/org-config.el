@@ -23,10 +23,6 @@
   (expand-file-name (format-time-string "daily/%Y-%m-%d.org")
                     org-roam-directory))
 
-(defun my/org-inbox-file ()
-  "Return path to inbox capture file."
-  (expand-file-name "scratch/inbox.org" org-roam-directory))
-
 (defun my/org-agenda-files-refresh (&rest _)
   "Refresh agenda files by scanning org-roam-directory recursively."
   (when (and (boundp 'org-roam-directory)
@@ -61,7 +57,7 @@
   (org-capture-templates
    '(("t" "TODO" entry (file my/org-daily-file)
       "* TODO %?\n" :empty-lines 1)
-     ("n" "Note" entry (file my/org-inbox-file)
+     ("n" "Note" entry (file "inbox.org")
       "* %?\n%U\n" :empty-lines 1)
      ("m" "Meeting" entry (file my/org-daily-file)
       "* MEETING %?\n%U\n" :empty-lines 1)))
