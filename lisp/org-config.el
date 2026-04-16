@@ -107,6 +107,11 @@
     (org-roam-directory (file-truename default-directory))
     (org-roam-db-location (expand-file-name "org-roam.db" (file-truename default-directory)))
     (org-roam-dailies-directory "daily/")
+    (org-roam-dailies-capture-templates
+     '(("d" "default" entry
+        "* %?"
+        :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d, %a - Daily>\n"))))
     :config
     (unless noninteractive
       (org-roam-db-autosync-mode))))
