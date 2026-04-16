@@ -49,6 +49,8 @@
   (org-hide-emphasis-markers nil)
   (org-ellipsis " ▾")
   (org-return-follows-link t)
+  ;; Tag column alignment. Negative = right-align from that column (default -77), text extends leftwards unless crowded.
+  (org-tags-column -101)
   (org-src-preserve-indentation t)
   (org-edit-src-content-indentation 0)
   ;; Babel — execute code blocks with C-c C-c. Confirm prompt disabled because
