@@ -169,7 +169,8 @@
 (my-leader-def
   :keymaps 'org-mode-map
   "r" '(:ignore t :which-key "render")
-  "r p" '(my/org-reader-mode :which-key "reader mode"))
+  "r p" '(my/org-reader-mode :which-key "reader mode")
+  "r l" '(org-toggle-link-display :which-key "toggle links"))
 
 ;;; Terminal key fixes for org-mode
 ;; evil-collection binds <tab> and <S-tab> (GUI function keys), but terminals
