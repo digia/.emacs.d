@@ -10,8 +10,9 @@
   :demand t
   :config
   (load-theme 'tokyonight-storm t)
+  ;; TODO: Remove once confirmed desired styling
   ;; No italic keywords (matches Neovim: styles.keywords.italic = false)
-  (set-face-attribute 'font-lock-keyword-face nil :slant 'normal)
+  ;; (set-face-attribute 'font-lock-keyword-face nil :slant 'normal)
 
   ;; Line number colors — non-current uses muted blue-gray, current uses bright fg
   (set-face-attribute 'line-number nil :foreground "#3B4261")
