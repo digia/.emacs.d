@@ -45,8 +45,8 @@
   (org-log-into-drawer "LOGBOOK")
   (org-log-done 'time)
   (org-startup-folded 'content)
-  (org-startup-indented t)
-  (org-hide-emphasis-markers t)
+  (org-startup-indented nil)
+  (org-hide-emphasis-markers nil)
   (org-ellipsis " ▾")
   (org-return-follows-link t)
   (org-src-preserve-indentation t)
@@ -144,29 +144,28 @@
   "n d y" '(org-roam-dailies-goto-yesterday :which-key "yesterday")
   "n d d" '(org-roam-dailies-goto-date :which-key "pick date"))
 
-;;; Render toggle — flip between pretty and raw markup (ftplugin-style).
-;; Scoped to org-mode-map so other modes can define their own SPC r p.
-(defun my/org-toggle-markup ()
-  "Toggle between raw markup and pretty rendering in org buffers."
+;;; Reader mode — hide emphasis markers and raw links for distraction-free reading.
+;; Default is markers visible (org-hide-emphasis-markers nil) for markdown-like
+;; editing. Toggle into reader mode when you want clean rendered output.
+(defun my/org-reader-mode ()
+  "Toggle reader mode: hide/show emphasis markers and raw link URLs."
   (interactive)
-  (if (bound-and-true-p org-indent-mode)
+  (if org-hide-emphasis-markers
       (progn
-        (org-indent-mode -1)
         (setq-local org-hide-emphasis-markers nil)
         (when org-link-descriptive (org-toggle-link-display))
         (font-lock-flush)
-        (message "Org markup: raw"))
+        (message "Reader mode: off"))
     (progn
-      (org-indent-mode 1)
       (setq-local org-hide-emphasis-markers t)
       (unless org-link-descriptive (org-toggle-link-display))
       (font-lock-flush)
-      (message "Org markup: pretty"))))
+      (message "Reader mode: on"))))
 
 (my-leader-def
   :keymaps 'org-mode-map
   "r" '(:ignore t :which-key "render")
-  "r p" '(my/org-toggle-markup :which-key "toggle markup"))
+  "r p" '(my/org-reader-mode :which-key "reader mode"))
 
 ;;; Terminal key fixes for org-mode
 ;; evil-collection binds <tab> and <S-tab> (GUI function keys), but terminals
